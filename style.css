@@ -144,11 +144,20 @@ section {
   scroll-snap-align: start;
 }
 
+section h1 {
+  font-size: 3rem;
+}
+
+section p {
+  font-size: 2rem;
+}
+
 .facts {
   /* background: black; */
   width: 100vw;
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   bottom: 150px;
@@ -162,12 +171,46 @@ section {
   /* background: red; */
   border-radius: 20px;
   padding: 20px;
+  margin: 20px 10px;
   /* box-shadow: 20px; */
   width: 250px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.9); */
+}
+
+.contact-factcard {
+  /* position: absolute; */
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  bottom: 150px;
+  /* background: red; */
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 10px;
+  /* box-shadow: 20px; */
+  width: 350px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.9); */
+}
+
+.contact-factcard .icon i {
+  /* border: 2px solid green; */
+  font-size: 4rem;
+}
+
+.contact-factcard .value h3 {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.contact-factcard .value p {
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .factcard .icon i {
@@ -220,6 +263,20 @@ section {
   text-align: left;
 }
 
+.info-top {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  left: 0px;
+  opacity: 1;
+  bottom: 500px;
+  width: 600px;
+  padding: 15px 50px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-align: left;
+}
+
 .slide.current .info {
   transform: translateX(600px);
   opacity: 1;
@@ -233,6 +290,17 @@ section {
 }
 
 .info p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.info-top h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.info-top p {
   font-size: 1.2rem;
   font-weight: 600;
 }
@@ -283,7 +351,7 @@ footer {
 
 footer ul {
   display: flex;
-  background: red;
+  /* background: red; */
   width: 15%;
   margin-right: 30px;
   justify-content: space-between;
@@ -306,6 +374,14 @@ footer ul li a {
 
 #kontakt {
   height: calc(100vh - 70px);
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 10px 50px;
 }
 
 @media (max-width: 600px) {
@@ -337,10 +413,10 @@ footer ul li a {
     display: none;
   }
 
-  .facts {
+  /* .facts {
     flex-direction: column;
     bottom: auto;
-  }
+  } */
 
   .factcard {
     /* position: absolute; */
